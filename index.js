@@ -79,23 +79,23 @@ console.log(dogYear());
 function dogFeeder(dogAge,dogWeight) {
   if (dogAge >= 1) {
       if(dogWeight < 6) {
-        console.log('amount to feed' + dogWeight*0.05);
+        console.log('amount to feed ' + dogWeight*0.05);
       }else if (dogWeight < 11) {
-        console.log('amount to feed' + dogWeight*0.04);
+        console.log('amount to feed ' + dogWeight*0.04);
       }else if(dogWeight <= 15) {
-        console.log('amount to feed' + dogWeight*0.03);
+        console.log('amount to feed ' + dogWeight*0.03);
       }else {
-        console.log('amount to feed' + dogWeight*0.02);
+        console.log('amount to feed ' + dogWeight*0.02);
       }  
     } 
  
     if (dogAge < 1) {
       if(dogAge <=0.5) {
-        console.log('amount to feed' + dogWeight*0.1);
+        console.log('amount to feed ' + dogWeight*0.1);
       }else if (dogAge <= 0.7) {
-        console.log('amount to feed' + dogWeight*0.05);
+        console.log('amount to feed ' + dogWeight*0.05);
       }else if(dogAge <= 0.12) {
-        console.log('amount to feed' + dogWeight*0.04);
+        console.log('amount to feed ' + dogWeight*0.04);
       } else {
         console.log('not feed');
       }  
@@ -113,17 +113,26 @@ dogFeeder(1,15);
 
 let computerChoice = Math.random();
 if (computerChoice < 0.34) {
-  computerChoice = "rock";
+  computerChoice = 'rock';
 }else if(computerChoice <= 0.67){
-  computerChoice = "paper";
+  computerChoice = 'paper';
 }else {
-  computerChoice = "scissors";
+  computerChoice = 'scissors';
+} 
+function playRPS(user, computer) {
+  if(user === computer) {
+    return 'It is a tie!' 
+  }else if (user === 'rock' && computer === 'scissors') {
+    return 'user wins';
+  }else if (user === 'paper' && computer === 'rock') {
+    return 'user wins';
+  }else if (user === 'scissors' && computer === 'paper'){
+    return 'user wins';
+  }else {
+    return 'computer wins';
+  }
 }
- 
 
-    
-  
-    
 
 
 
@@ -154,13 +163,14 @@ console.log(toCentimatre(5));
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-let annoyingSong = (bottles) => {
-  for(let bottle = bottles; bottle > 0; bottle--) {
-    console.log('${bottle} bottles of soda. take one down pass it around ${bottle - 1} bottles of soda on the wall');
-  }
-};
+function annoyingSong(num1){
+  for (i=num1; i>0 ; i--) {
+    console.log(i + 'bottles of soda on the wall' + i + 'bottles of soda' + (i-1) + 'take one down pass it around');
 
+  };
+}
 
+annoyingSong(5);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
