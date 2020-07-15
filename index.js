@@ -150,11 +150,11 @@ console.log(toMiles(5));
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-function toCentimatre(feet) {
+function toCentimetre(feet) {
   return feet * 30.48;
 
  }
-console.log(toCentimatre(5));
+console.log(toCentimetre(5));
 
 
 
@@ -163,14 +163,14 @@ console.log(toCentimatre(5));
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-function annoyingSong(num1){
-  for (i=num1; i>0 ; i--) {
+function annoyingSong(bottle){
+  for (i=bottle; i>0 ; i--) {
     console.log(i + 'bottles of soda on the wall' + i + 'bottles of soda' + (i-1) + 'take one down pass it around');
 
   };
 }
 
-annoyingSong(5);
+annoyingSong(8);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -181,9 +181,21 @@ annoyingSong(5);
 //60s should be D 
 //and anything below 60 should be F
   
+function grade(score){
+  if (score>=90){
+    return 'A';
+  }else if (score>=80) {
+    return 'B';
+  }else if (score >=70) {
+    return 'C';
+  }else if (score >=60) {
+    return 'D';
+  }else {
+    return 'F';
+  }
+}
 
-
-
+grade(90);
   
   
 
